@@ -34,3 +34,8 @@ This project demonstrates backend development skills using modern Java and Sprin
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/product-category-rest-api.git
+## API Endpoints
+- **Category** - /api/categories
+- **Product** - /api/products
+- **User** - /user
+-  **Supports GET, POST, PUT, DELETE operations with pagination and sorting.**
