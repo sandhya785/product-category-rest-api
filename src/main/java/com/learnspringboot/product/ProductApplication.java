@@ -25,6 +25,7 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
                 url="example.com"
         )
 )
+
 @SpringBootApplication
 @EnableSpringDataWebSupport
 public class ProductApplication {
