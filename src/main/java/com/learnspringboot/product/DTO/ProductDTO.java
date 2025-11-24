@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
         name = "Product",
         description = "It holds product information."
 )
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

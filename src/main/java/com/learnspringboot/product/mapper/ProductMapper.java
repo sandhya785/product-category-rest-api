@@ -13,6 +13,7 @@ public class ProductMapper {
                 product.getPrice(),
                 product.getCategory().getId());
     }
+
     public static Product toProductEntity(ProductDTO productDTO, Category category){
         Product product=new Product();
         product.setId(productDTO.getId());

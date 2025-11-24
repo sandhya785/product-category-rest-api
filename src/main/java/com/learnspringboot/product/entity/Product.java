@@ -7,7 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

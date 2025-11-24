@@ -67,7 +67,7 @@ public class CategoryController {
         return categoryService.getCategoryById(id);
     }
 
-    // delete category
+    //delete category
     @Operation(
             summary = "Delete Category by Category id",
             description = "REST API to delete category by category id."
