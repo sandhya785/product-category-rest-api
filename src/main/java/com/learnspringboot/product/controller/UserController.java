@@ -2,6 +2,7 @@ package com.learnspringboot.product.controller;
 
 import com.learnspringboot.product.DTO.UserDTO;
 import com.learnspringboot.product.entity.User;
+import com.learnspringboot.product.repository.UserRepository;
 import com.learnspringboot.product.security.JwtUtil;
 import com.learnspringboot.product.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class UserController {
     private JwtUtil jwtUtil;
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private UserRepository userRepository;
     @Autowired
     private MyUserDetailsService userDetailsService;
     @PostMapping("/register")
@@ -44,6 +47,10 @@ public class UserController {
         UserDetails userDetails=userDetailsService.loadUserByUsername(user.getUsername());
         return jwtUtil.generateToken(userDetails.getUsername(),roles);
 
+    }
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
 
