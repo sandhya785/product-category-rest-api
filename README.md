@@ -1,41 +1,124 @@
-# Product-Category REST API
+# 🛒 Product & Category REST API
 
-## Overview
-This is a Spring Boot REST API application for managing products and categories.  
-It provides secure, efficient, and scalable APIs for CRUD operations on products and categories, along with features like JWT authentication, validation, pagination, sorting, and Swagger documentation.
+A complete Spring Boot backend providing CRUD operations for **Products** and **Categories**, with JWT authentication, input validation, global exception handling, pagination, sorting, and Swagger documentation.
 
-This project demonstrates backend development skills using modern Java and Spring Boot technologies.
+---
 
-## Features
-- CRUD operations for Products and Categories via REST endpoints
-- JWT-based authentication and authorization
-- Input validation using `@Valid`
-- Global exception handling for better error responses
-- Pagination and sorting for API responses
-- Swagger UI documentation for testing APIs
-- Unit tests for controllers and services using JUnit and Mockito
+## 🚀 Features
+- **CRUD operations** for Products and Categories
+- **JWT Authentication & Authorization**
+- **Input Validation** using `@Valid`
+- **Global Exception Handling**
+- **Pagination & Sorting** support
+- **Swagger UI** for interactive API testing
+- **Unit Tests** using JUnit & Mockito
+- **Deployed on Render** using **PostgreSQL (Free Tier)**
 
-## Technologies Used
-- **Java 21**
-- **Spring Boot 3.5.6**
+---
+
+## 🧰 Technologies Used
+- Java 21
+- Spring Boot 3.5.6
 - Spring Data JPA & Hibernate
-- **MySQL**
+- PostgreSQL
 - Maven
-- JWT for authentication
-- Swagger for API documentation
-- JUnit & Mockito for unit testing
+- JWT (JSON Web Token)
+- Swagger / OpenAPI
+- JUnit 5 & Mockito
 
-## Tools & Utilities
-- **Postman** – for API testing
-- **jwt.io** – for verifying JWT tokens
-- **Swagger UI** – interactive API documentation
+---
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/product-category-rest-api.git
-## API Endpoints
-- **Category** - /api/categories
-- **Product** - /api/products
-- **User** - /user
--  **Supports GET, POST, PUT, DELETE operations with pagination and sorting.**
+## 🛠 Tools & Utilities
+- **Postman** – API testing
+- **Swagger UI** – API documentation
+- **jwt.io** – JWT verification
+
+---
+
+## 🌐 Live Deployment (Render)
+
+**Base URL:**
+
+https://product-category-rest-api.onrender.com
+
+**Swagger UI:**
+
+https://product-category-rest-api.onrender.com/swagger-ui/index.html
+
+---
+
+## 📌 API Endpoints
+
+### **Category APIs** (`/api/categories`)
+- `GET /api/categories`
+- `POST /api/categories`
+- `PUT /api/categories/{id}`
+- `DELETE /api/categories/{id}`
+
+Supports:
+- Pagination → `?page=0&size=5`
+- Sorting → `?sort=name,asc`
+
+---
+
+### **Product APIs** (`/api/products`)
+- `GET /api/products`
+- `POST /api/products`
+- `PUT /api/products/{id}`
+- `DELETE /api/products/{id}`
+
+Supports:
+- Pagination
+- Sorting
+- Category linking
+
+---
+
+### **User APIs** (`/user`)
+- `POST /user/register`
+- `POST /user/login` → returns JWT token
+
+### Add token in header:
+
+- Authorization: Bearer <token>
+
+---
+
+## 🧪 Unit Tests
+- Controller tests
+- Service tests  
+  Using **JUnit 5** and **Mockito**.
+
+### Run tests:
+
+- mvn test
+
+---
+
+## 📝 Setup Instructions (Local)
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/<your-username>/product-category-rest-api.git
+
+2️⃣ Configure application.properties (PostgreSQL)
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/yourdb
+spring.datasource.username=postgres
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+3️⃣ Run the application
+
+mvn spring-boot:run
+
+
+---
+
+👩‍💻 Author
+
+Sandhya
+Java Backend Developer | Spring Boot | REST APIs
+
+---
